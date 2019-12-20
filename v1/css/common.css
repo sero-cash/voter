@@ -1,0 +1,143 @@
+.navbar .form-group{
+  display: inline-block!important;
+  margin-bottom: 0!important;
+}
+.searchBtn{
+  background: #3498db;
+  border-radius:0 .25rem .25rem 0;
+  margin-bottom: 1px;
+  color:white;
+}
+.navbar .form-control{
+  border-radius: .25rem 0 0 .25rem;
+}
+.navContent .navbar{
+  background: #f8f9fa!important;
+}
+.text-right{
+  text-align: right;
+}
+.margin-top-20{
+  margin-top: 20px;
+}
+.margin-bottom-20{
+  margin-bottom: 20px;
+}
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float:right;
+}
+.margin-top-14{
+  margin-top: 14px;
+}
+
+
+.pagePath{
+  margin-top: 128px;
+  background: #e9ecef
+}
+.pagePath .page-nav-right{
+  padding:1rem;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+.pagePath .page-nav-right a{
+  color: rgb(52, 152, 219);
+}
+.pagePath .pageType{
+  line-height: 53px;
+  font-size: 20px;
+  color: #6c757d;
+}
+.account-list .page-link{
+  color: #212529!important;
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  font-size: 13px;
+}
+.page-link>input{
+  left: 3.6em;
+  position: absolute;
+  top: .4em;
+  width: 4em;
+}
+.account-list .pagina-style{
+  margin-bottom: 0;
+}
+.account-list .tr-style{
+  font-size: 13px;
+  color: #777;
+}
+.account-list .tr-style a{
+  color: rgb(52, 152, 219)
+}
+.nowarp{
+  width: 120px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.cantClick{
+  cursor: not-allowed!important;
+}
+.page-item{
+  cursor: pointer;
+}
+#ContentPlaceHolder_divSummary{
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+#ContentPlaceHolder_divSummary .table thead th{
+  border-bottom: 1px solid #dee2e6;
+}
+@media screen and (max-width: 575px) {
+  .pagePath{
+    margin-top: 106px;
+  }
+}
+
+.titleNoWrap {
+  width: 70%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color:#343a40
+
+}
+
+
+.descNoWrap {
+  width: 75%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  height: 150px;
+  color:#6c757d;
+}
+
+
+.bg-gray{
+  background: #6c757d;
+}
+
+.fengexian{
+  border-top:1px solid rgba(0,0,0,.1)
+}
+
+.dapp-data{
+  margin: 10px;
+}

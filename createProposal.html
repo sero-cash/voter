@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <link rel="shortcut icon" href="icon.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>创建提案</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datetimepicker.css"/>
+  <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+</head>
+
+<body id="page-top">
+
+<div id="wrapper">
+  <div class="d-flex flex-column" id="content-wrapper">
+    <div id="content">
+      <div class="header">
+      </div>
+      <nav aria-label="breadcrumb" style="margin-top: 80px;">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html" id="homeHref">首页</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="createProposalLi">创建提案</li>
+        </ol>
+      </nav>
+      <div class="container-fluid">
+        <div class="card shadow-lg o-hidden border-0 my-5">
+          <div class="card-body p-0">
+            <div class="row">
+              <div class="col-lg-12">
+                <!--<div class="toast" style="position: absolute;right:30%;z-index: 99999;" id="toast1">-->
+                <!--<div class="toast-body alert-danger">-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="p-5">
+                  <div class="text-center">
+                    <h4 class="text-dark mb-4" id="createProposalH4">创建投票</h4>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-4 mb-3 mb-sm-0"><label id="accountLabel">账号</label>
+                      <select class="form-control address"></select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="titleLabel">标题</label>
+                    <div class="row">
+                      <div class="col-sm-4 mb-3 mb-sm-0">
+                        <input type="text" class="form-control" value="" id="title" autocomplete="off" required/>
+                        <small id="titleTip" class="form-text text-muted">标题最多30个字</small>
+                      </div>
+                      <!--                        <div class="col-sm-8 mb-3 mb-sm-0 estimateShares">-->
+                      <!--                          <span>Average Price</span>: <strong class="text-primary">0</strong> SERO<br/>-->
+                      <!--                          <span> Maximum buyable share</span>: <strong class="text-primary">0</strong>-->
+                      <!--                        </div>-->
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="startTimeLabel"></label>
+                    <div class="row">
+                      <div class='col-sm-4'>
+                        <input type='text'  id='startTime'/>   - <input type='text' id='endTime'/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="pledegLabel">参与投票质押SERO</label>
+                    <div class="row">
+                      <div class="col-sm-4 mb-3 mb-sm-0">
+                        <input type="text" class="form-control" value="" id="minHoldAmount" autocomplete="off" required/>
+                        <small id="pledegTip" class="form-text text-muted"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="feeLabel">参与投票消耗Sero</label>
+                    <div class="row">
+                      <div class="col-sm-4 mb-3 mb-sm-0">
+                        <input type="text" class="form-control" value="" id="fee" autocomplete="off" required/>
+                        <small id="feeTip" class="form-text text-muted"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="minparticipantslabel">最少参与人数</label>
+                    <div class="row">
+                      <div class="col-sm-4 mb-3 mb-sm-0">
+                        <input type="text" class="form-control" value="" id="minParticipants" autocomplete="off" required/>
+                        <small id="minparticipantstip" class="form-text text-muted"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="descLabel">描述</label>
+                    <div class="row">
+                      <div class="col-sm-4 mb-3 mb-sm-0">
+                        <textarea  class="form-control" value="" id="desc" autocomplete="off" style="height: 200px"> </textarea>
+                        <small id="descTip" class="form-text text-muted"></small>
+                        <small id="descFeeTip" class="form-text text-muted"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="totalFeeLabel">总费用</label>:<label id="totalFee"></label><label id="detailLabel"></label><label>&nbsp;SERO </label>
+                  </div>
+                  <button class="btn btn-primary text-white btn-user" id="submitButton">
+                    创建
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
+  <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+
+
+
+
+<!-- verify modal -->
+<div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="verifyModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"   id="verify-modal-body" style="color: red">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="verifyModalCloseButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- submit modal -->
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="submitModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"   id="submit-modal-body" style="color: red">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitModalConfirmButton">Confirm</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="submitModalCloseButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/theme.js"></script>
+<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/pullup-js-sdk.js"></script>
+<script src="js/bignumber.js"></script>
+<script src="js/common.js"></script>
+<script src="js/serojs.js"></script>
+<script src="js/proposalcommon.js"></script>
+<script src="js/createProposal.js"></script>
+<script src="js/proposal-abi.js"></script>
+<script src="js/proposal-data.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/storage.js"></script>
+<!-- include your less or built css files  -->
+<!--
+bootstrap-datetimepicker-build.less will pull in "../bootstrap/variables.less" and "bootstrap-datetimepicker.less";
+or
+
+-->
+
+
+<script>
+
+    $('.header').load('header.html');
+    $('.footer').load('footer.html');
+
+    $(function () {
+        Common.app = CreateProposal;
+        Common.init();
+    });
+</script>
+
+
+</body>
+
+</html>

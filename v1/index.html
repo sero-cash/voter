@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <link rel="shortcut icon" href="icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Proposal</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+  <div class="d-flex flex-column" id="content-wrapper">
+    <div id="content">
+      <div class="header">
+      </div>
+      <div class="container-fluid" style="margin-top: 100px;">
+        <div class="col-sm-4 mb-3 mb-sm-0"><label id="accountLabel">账号</label>
+          <select class="form-control address" style="display: inline"></select>
+        </div>
+        <div class="d-sm-flex justify-content-between align-items-center mb-4">
+          <h3 class="text-dark mb-0"></h3><button class="btn text-light" style="background-image: linear-gradient(180deg,#36b9cc 10%,#258391);background-size: cover;"><i class="fas   fa-plus-circle"></i> <span class="backup">创建提案</span></button>
+        </div>
+        <div class="row small dapp-data">
+        </div>
+        <nav aria-label="Page navigation" class="vue-pagination col-auto" style="overflow:hidden;margin:20px 0;">
+          <ul class="pagination pull-right pagina-style">
+            <li class="disabled page-item page-item1">
+              <a href="javacript:void(0);" tabindex="-1" aria-label="First" class="page-link">
+                <span aria-hidden="true">«</span> <span class="sr-only">First</span>
+              </a>
+            </li>
+            <li class="disabled page-item page-item2">
+              <a href="javacript:void(0);" tabindex="-1" aria-label="Previous" class="page-link">
+                <span aria-hidden="true">&lt;</span> <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <div class="current page-link"><span style="margin-right:4.5em;">Page</span>of <b class="totalPage">1</b><input value="1" style="text-align:center;" class="inputPage"/></div>
+            </li>
+            <li class="disabled page-item page-item3">
+              <a href="javacript:void(0);" tabindex="-1" aria-label="Next" class="page-link">
+                <span aria-hidden="true">&gt;</span> <span class="sr-only">Next</span></a>
+            </li>
+            <li class="disabled page-item page-item4">
+              <a href="javacript:void(0);" tabindex="-1" aria-label="Last" class="page-link">
+                <span aria-hidden="true">»</span> <span class="sr-only">Last</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/theme.js"></script>
+<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/pullup-js-sdk.js"></script>
+<script type="text/javascript" src="js/serojs.js?v=12345"></script>
+<script type="text/javascript" src="js/proposalcommon.js?v"></script>
+<script type="text/javascript" src="js/proposal-abi.js"></script>
+<script type="text/javascript" src="js/proposal-data.js"></script>
+<script type="text/javascript" src="js/bignumber.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/index.js?v"></script>
+<script type="text/javascript" src="js/storage.js"></script>
+
+<script>
+    $('.header').load('header.html');
+    $('.footer').load('footer.html');
+    setTimeout(function () {
+        $("nav div ul li:eq(1) a").addClass('text-light');
+    },5);
+
+
+    $(function () {
+        Common.app = IndexPage;
+        Common.init();
+    })
+
+
+</script>
+
+</body>
+
+</html>
